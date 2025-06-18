@@ -1,0 +1,40 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background: #1E2130;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+.home-container {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 38px 32px;
+    background: #22243a;
+    border-radius: 16px;
+    box-shadow: 0 2px 18px rgba(0,0,0,0.13);
+    text-align: center;
+}
+
+h1 {
+    color: #7fffd4;
+    font-size: 2.5rem;
+    margin-bottom: 28px;
+}
+
+.home-link {
+    display: block;
+    background: #7fffd4;
+    color: #22243a;
+    padding: 14px 38px;
+    border-radius: 8px;
+    margin: 18px auto 0 auto;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    width: 320px;
+    transition: background 0.2s;
+}
+.home-link:hover {
+    background: #5DE0B7;
+}
