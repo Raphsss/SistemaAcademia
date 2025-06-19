@@ -1,4 +1,4 @@
-CREATE DATABASE academiadb;
+-- CREATE DATABASE academiadb;
 USE academiadb;
 
 -- Tabela de instrutores

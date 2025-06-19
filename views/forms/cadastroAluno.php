@@ -45,7 +45,7 @@ function gerarOpcoesPlano() {
                 <?php echo gerarOpcoesPlano(); ?>
             </select>
             <button type="submit">Cadastrar</button>
-            <a href="../home.html" class="back-link">Voltar</a>
+            <a href="../../home.html" class="back-link">Voltar</a>
         </form>
     </div>
 </body>

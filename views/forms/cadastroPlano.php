@@ -1,13 +1,13 @@
 <?php
-function gerarOpcoesPlano() {
+function gerarOpcoesInstrutor() {
     require_once '../../config/db_connect.php';
-    $sql = "SELECT id, nome_plano FROM planos_treino";
+    $sql = "SELECT id, nome FROM instrutores";
     $result = $conn->query($sql);
 
-    $options = '<option value="">Selecione um plano</option>';
+    $options = '<option value="">Selecione um instrutor</option>';
     if ($result && $result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            $options .= '<option value="' . htmlspecialchars($row['id']) . '">' . htmlspecialchars($row['nome_plano']) . '</option>';
+            $options .= '<option value="' . htmlspecialchars($row['id']) . '">' . htmlspecialchars($row['nome']) . '</option>';
         }
     }
     return $options;
@@ -38,12 +38,12 @@ function gerarOpcoesPlano() {
             <input type="text" id="tipo_treino" name="tipo_treino">
 
             <label for="instrutor_id">Instrutor Responsável:</label>
-            <select id="plano_id" name="plano_id" required>
-                <?php echo gerarOpcoesPlano(); ?>
+            <select id="instrutor_id" name="instrutor_id" required>
+                <?php echo gerarOpcoesInstrutor(); ?>
             </select>   
 
             <button type="submit">Cadastrar</button>
-            <a href="../home.html" class="back-link">Voltar</a>
+            <a href="../../home.html" class="back-link">Voltar</a>
         </form>
     </div>
 </body>

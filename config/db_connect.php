@@ -1,31 +1,16 @@
 <?php
 
-// Configurações de conexão do banco mysql
-define('HOST', 'localhost');
-define('USERNAME', 'root');
-define('PASSWORD', '');
-define('DATABASE', 'my_database');
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db = "academiadb";
 
-class Connect{
-    protected $conn;
+// Cria a conexão
+$conn = new mysqli($host, $user, $pass, $db);
 
-    function __construct() 
-    {
-        $this->connectDatabase();
-    }
-
-    function connectDatabase()
-    {
-        try
-        {
-            $this->conn = new PDO('mysql:host='.HOST.';dbname='.DATABASE, USERNAME, PASSWORD);
-        }
-        catch(PDOException $error)
-        {
-            echo "Error: " . $error->getMessage();
-            die();
-        }
-    }
+// Verifica a conexão
+if ($conn->connect_error) {
+    die("Erro na conexão: " . $conn->connect_error);
 }
 
 ?>
