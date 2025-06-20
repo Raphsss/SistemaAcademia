@@ -8,10 +8,17 @@
 <body>
     <div class="home-container">
         <h1>Bem-vindo ao Sistema Academia</h1>
-        <a class="home-link" href="">Exibir Registros</a>
+        <a class="home-link" href="#">Exibir Registros</a>
         <a class="home-link" href="views/forms/cadastroInstrutor.html">Cadastrar Instrutor</a>
         <a class="home-link" href="views/forms/cadastroPlano.php">Cadastrar Plano de Treino</a>
         <a class="home-link" href="views/forms/cadastroAluno.php">Cadastrar Aluno</a>
+        <a class="home-link" href="">Cadastrar Aluno</a>
     </div>
+    <?php
+    require_once __DIR__ . 'config/db_connect.php';
+    if (isset($conn) && $conn instanceof mysqli) {
+        $conn->close();
+    }
+    ?>
 </body>
 </html>
